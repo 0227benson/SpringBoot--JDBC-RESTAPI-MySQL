@@ -38,4 +38,3 @@ public class StudentController {
         return eDAO.delete(id)+"Delete success";
     }//刪除資料庫中指定資料
 }
-
