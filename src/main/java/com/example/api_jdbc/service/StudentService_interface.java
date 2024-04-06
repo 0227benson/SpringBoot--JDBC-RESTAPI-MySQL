@@ -14,5 +14,5 @@ public interface StudentService_interface {
 
     List<Student> getAll();
 
-    Student getById(int id);
+    List<Student> getById(int id);
 }

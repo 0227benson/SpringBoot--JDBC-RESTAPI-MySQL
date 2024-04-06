@@ -35,7 +35,7 @@ public class StudentService implements StudentService_interface{//需要實現in
     }//獲取資料庫中所有的資料,並使用BeanPropertyRowMapper將結果映射到Student列表。
 
     @Override
-    public Student getById(int id) {
-        return jdbcTemplate.queryForObject("SELECT * FROM student WHERE id=?",new BeanPropertyRowMapper<Student>(Student.class),id);
+    public List<Student> getById(int id) {
+        return jdbcTemplate.query("SELECT * FROM student WHERE id=?",new BeanPropertyRowMapper<Student>(Student.class),id);
     }//根據提供的id獲取特定的資料,並使用BeanPropertyRowMapper將結果映射到Student列表。
 }
