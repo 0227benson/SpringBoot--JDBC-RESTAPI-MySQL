@@ -21,7 +21,7 @@ public class StudentService implements StudentService_interface{//需要實現in
 
     @Override
     public int update(Student student, int id) {
-        return jdbcTemplate.update("UPDATE student SET name=?,age=?,eamil=?,phonenumber=? WHERE id=?",new Object[]{student.getName(),student.getAge(),student.getEmail(),student.getPhonenumber(),id});
+        return jdbcTemplate.update("UPDATE student SET name=?,age=?,email=?,phonenumber=? WHERE id=?",new Object[]{student.getName(),student.getAge(),student.getEmail(),student.getPhonenumber(),id});
     }//更新資料庫中已有的資料
 
     @Override
